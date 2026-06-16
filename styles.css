@@ -249,7 +249,7 @@ nav a {
 }
 
 .categories > .container {
-  padding: 3.125rem 3rem 3.625rem;
+  padding: 3.125rem 1.125rem 3.625rem;
 }
 
 .category-grid {
@@ -301,7 +301,7 @@ nav a {
 }
 
 .products > .container {
-  padding: 3.125rem 3rem 2rem;
+  padding: 3.125rem 1.125rem 2rem;
 }
 
 .products h2 + a {
@@ -490,6 +490,14 @@ footer input[type="submit"] {
 
   .hero-image {
     flex: 0.5;
+  }
+
+  .categories > .container {
+    padding: 3.125rem 3rem 3.625rem;
+  }
+
+  .products > .container {
+    padding: 3.125rem 3rem 2rem;
   }
 
   .category-grid,
