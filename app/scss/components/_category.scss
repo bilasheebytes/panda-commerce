@@ -1,0 +1,63 @@
+@use "../utilities/" as *;
+
+.category {
+  .container {
+    padding-block: 3.125rem 3.625rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    margin-block-start: 1.5rem;
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    padding: 0.75rem 2.25rem 0.75rem 3rem;
+    border-radius: 0.75rem;
+
+    &:first-child {
+      background: linear-gradient(
+        to bottom,
+        var(--tangerine) 0%,
+        var(--golden-yellow) 100%
+      );
+    }
+
+    &:nth-of-type(2) {
+      background: linear-gradient(
+        to bottom,
+        var(--hot-pink) 0%,
+        var(--deep-pink) 100%
+      );
+    }
+
+    &:last-child {
+      background: linear-gradient(
+        to bottom,
+        var(--cornflower-blue) 0%,
+        var(--electric-indigo) 100%
+      );
+    }
+
+    h3 {
+      font-size: 2.375rem;
+      font-weight: 500;
+      color: var(--white);
+    }
+
+    img {
+      width: 6.25rem;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}

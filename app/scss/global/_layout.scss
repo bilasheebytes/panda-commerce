@@ -1,0 +1,54 @@
+@use "../utilities/" as *;
+
+// Spacing
+.container {
+  width: 100%;
+  max-width: 80.31rem;
+  margin: 0 auto;
+
+  &--px {
+    padding-inline: 1.25rem;
+
+    @include breakpoint-up(xlarge) {
+      padding-inline: 3rem;
+    }
+  }
+}
+
+.padding-inline {
+  padding-inline: 1.25rem;
+
+  @include breakpoint-up(xlarge) {
+    padding-inline: 0;
+  }
+}
+
+// Flexbox
+.flex {
+  display: flex;
+}
+
+.flex-ai-c {
+  align-items: center;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+// Visibility
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}

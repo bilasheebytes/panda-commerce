@@ -1,0 +1,85 @@
+@use "../utilities/" as *;
+
+.footer {
+  text-align: center;
+  padding-block: 4.875rem 1.75rem;
+
+  .container {
+    min-height: 20rem;
+    padding-inline: 1.75rem;
+    flex-direction: column;
+    border-radius: 1rem;
+    background: var(--seashell);
+
+    @include breakpoint-up(large) {
+      min-height: 30rem;
+      padding-inline: 3rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+
+      @include breakpoint-up(large) {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      margin-block: 0.25rem 1rem;
+
+      @include breakpoint-up(large) {
+        font-size: 1.125rem;
+      }
+    }
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 44.75rem;
+
+    input {
+      font-size: 1.125rem;
+      padding-block: 1.25rem;
+
+      @include breakpoint-up(large) {
+        font-size: 1.5rem;
+      }
+
+      &[type="email"] {
+        width: 100%;
+        padding-inline-start: 1rem;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+
+        @include breakpoint-up(large) {
+          padding-inline-start: 2.25rem;
+        }
+      }
+
+      &[type="submit"] {
+        cursor: pointer;
+        width: 10.75rem;
+        font-weight: 500;
+        color: var(--white);
+        background: linear-gradient(
+          to bottom,
+          var(--hot-pink) 0%,
+          var(--deep-pink) 100%
+        );
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+
+        @include breakpoint-up(large) {
+          width: 14.25rem;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    font-size: 0.9375rem;
+    padding-block-start: 1.5rem;
+  }
+}
